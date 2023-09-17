@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
-import { 01LambdaTypescriptStack } from '../lib/01-lambda-typescript-stack';
+import { LambdaTypescriptStack } from '../lib/01-lambda-typescript-stack';
 
 const app = new cdk.App();
-new 01LambdaTypescriptStack(app, '01LambdaTypescriptStack', {
+new LambdaTypescriptStack(app, 'LambdaTypescriptStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */

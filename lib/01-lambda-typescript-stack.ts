@@ -1,16 +1,19 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
+import { LambdaProject } from './lambda';
+import path = require('path');
+import { Runtime } from 'aws-cdk-lib/aws-lambda';
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
-export class 01LambdaTypescriptStack extends cdk.Stack {
+export class LambdaTypescriptStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    // The code that defines your stack goes here
-
-    // example resource
-    // const queue = new sqs.Queue(this, '01LambdaTypescriptQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
+    new LambdaProject(this, 'HolaMundo', {
+      functionName: 'HolaMundo',
+      handler: 'hello-world.function.handler',
+      pathCode: `${path.join(__dirname, '../code/lambda01')}`,
+      runtime: Runtime.NODEJS_18_X
+    })
   }
 }
