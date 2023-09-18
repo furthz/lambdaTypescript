@@ -11,8 +11,8 @@ export class LambdaTypescriptStack extends cdk.Stack {
 
     new LambdaProject(this, 'HolaMundo', {
       functionName: 'HolaMundo',
-      handler: 'hello-world.function.handler',
-      pathCode: `${path.join(__dirname, '../code/lambda01')}`,
+      handler: 'hello-world.handler',
+      pathCode: `${path.join(__dirname, '../code/lambda01/dist')}`,
       runtime: Runtime.NODEJS_18_X
     })
   }
