@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/hello-world.ts"],
+  "sourcesContent": ["import { APIGatewayEvent, APIGatewayProxyResult, Context } from 'aws-lambda'\n\n\nexport const handler = async (event: APIGatewayEvent, context: Context): Promise<APIGatewayProxyResult> => {\n    console.log(`Event: ${JSON.stringify(event, null, 2)}`);\n    console.log(`Event: ${JSON.stringify(context, null, 2)}`);\n\n    return {\n        statusCode: 200,\n        body: JSON.stringify({ message: 'hola mundo' })\n    }\n}"],
+  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,aAAAE,IAAA,eAAAC,EAAAH,GAGO,IAAME,EAAU,MAAOE,EAAwBC,KAClD,QAAQ,IAAI,UAAU,KAAK,UAAUD,EAAO,KAAM,CAAC,CAAC,EAAE,EACtD,QAAQ,IAAI,UAAU,KAAK,UAAUC,EAAS,KAAM,CAAC,CAAC,EAAE,EAEjD,CACH,WAAY,IACZ,KAAM,KAAK,UAAU,CAAE,QAAS,YAAa,CAAC,CAClD",
+  "names": ["hello_world_exports", "__export", "handler", "__toCommonJS", "event", "context"]
+}
