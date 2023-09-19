@@ -1,0 +1,22 @@
+{
+  "name": "efsclean",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.121",
+    "@types/node": "^20.6.2",
+    "esbuild": "^0.19.3",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1459.0"
+  }
+}
